@@ -1,68 +1,49 @@
-%
-%	Uyghur latex typesetting example
-%	Anwar Mamat
-%	anwarmamat@gmail.com
-%
-
 \documentclass[24]{article}
-
-\usepackage{setspace}
+%\usepackage[margin=2.5cm]{geometry}
+%\usepackage{xcolor,graphicx}
+%\usepackage{array}
 \usepackage{multicol}
 \usepackage{amsmath}
- \usepackage{verbatim}
+\usepackage{verbatim}
 \usepackage{algorithm}
 \usepackage{algorithmic}
+\usepackage{polyglossia}
 \usepackage{verse}
 \usepackage{chemfig}
-\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
+%\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}
 \usepackage{fontspec}
 \usepackage{wrapfig}
-%\usepackage{arabxetex}
-\usepackage{polyglossia}
 
-
-\setmainlanguage{english}
+%\setdefaultlanguage[locale=morocco]{arabic}
+\setdefaultlanguage{english}
 \setotherlanguage{arabic}
 
-\newcommand\attrib[1]{\nopagebreak{\raggedleft\footnotesize #1\par}}
-\newlength\lineindent
-\newcommand*\setlineindent[1]{%
-  \settowidth\lineindent{#1}%
-  \addtolength\lineindent{-\vgap}%
-  \addtolength\lineindent{-10pt}}
-  
-\renewcommand{\familydefault}{\sfdefault}
+\newfontfamily\englishfont[Scale=1]{UKIJ Tuz}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
+\newfontfamily\arabicfontsf[Script=Arabic,Scale=1]{UKIJ Qara}
+%\newfontfamily\arabicfonttt[Script=Arabic,Scale=1]{Amiri}
 
-
-
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 
 \begin{document}
 
-
+\begin{titlepage}
+%\pagecolor{blue!10}
+%\centering
 \title{\textarabic{\LaTeX  تە ئۇيغۇرچە بەتنى قانداق ياسايمىز؟ }}
-%\thanks{123456789}}
-%\title{}
 \author{
 {\em } \\\textarabic{ئەنۋەر مەمەت \footnote{\textarabic{مەن بەت ياساشقا قىزىقىپ بۇنى ياساپ باقتىم.}}}\\
-{\em anwar@temple.edu}\\
+{\em anwarmamat@gmail.com}\\
 }
-
-%\title{Real-Time Divisible Load Scheduling for Cluster Computing}
-
 \date{}
 \maketitle{}
 \thispagestyle{empty}
 
 
-
-
-
 \begin{Arabic}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Basma}
 \section{\textarabic{ جەدۋەل }}
 \end{Arabic}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
 
 \begin {table}[h]
 \caption {\textarabic{بىزنىڭ ھۆنەرۋەنلىرىمىز}} \label{tab:people} 
@@ -82,10 +63,8 @@
 \end{table}
 
 \begin{Arabic}
-
-%\RLmulticolcolumns
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{كۆپ ستون }}
+\RTLmulticolcolumns
 \begin{multicols}{3}
 1. تاش چىراغ. باركۆل ناھىيىسىدىن مىلادىدىن ئىلگىرىكى دەۋرلەرگە تەۋە بىر خارابىلىكتىن بىر دانە تاش چىراغ تېپىلغان. بۇ چىراغنىڭ ئېگىزلىكى 31 سانتىمېتىر بولۇپ، چاسا تەگلىك شەكلىدە ياسالغان. چىراغنىڭ بىر يېنىغا مايمۇننىڭ شەكلى ئويۇلغان. 1972 – يىلى تۇرپان ئاستانە قەدىمكى قەبرىستانلىقىدىكى 177 – نومۇرلۇق قەبرىدىن بىر دانە ئىپتىدائىي تاش چىراغ قېزىۋېلىنغان. بۇ چىراغ خېلى بۇرۇنقى دەۋرلەردە ياسالغان، ئەمما تاڭ سۇلالىسى دەۋرىگە كەلگەندە جەسەت بىلەن قويۇلغان، دەپ پەرەز قىلىنغان. چىراغنىڭ ئېگىزلىكى 11.8سانتىمېتىر، ئۇزۇنلۇقى 12 سانتىمېتىر بولۇپ، ئۇ ھازىر ئاپتونوم رايونلۇق مۇزېيدا ساقلانماقتا.
 
@@ -93,15 +72,10 @@
 \end{multicols}
 \end{Arabic}
 
-
 \begin{Arabic}
 
-
-
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{رەسىم قىستۇرۇش}}
-
-
 
 3. لاي چىراغ. لايدا ياسالغان بۇنداق چىراغلار ئاساسەن تۇرپان ئاستانىدىكى مىلادىيە 4 – ئەسىردىن 8 – ئەسىرگىچە بولغان دەۋرگە تەۋە قەبرىلەردىن قېزىۋېلىنغان. ئۇلارنىڭ سانىمۇ خېلى كۆپ. مەسىلەن: تۇرپان ئاستانىدىكى 307 – نومۇرلۇق قەبرىدىن ئۈچ دانە، 327 – نومۇرلۇق قەبرىدىن 12 دانە لاي چىراغ قېزىۋېلىنغان. بۇ چىراغلار قولدا ياسالغان بولۇپ، شەكلى ئاددىي، ياسىلىشى بىر قەدەر قوپال.
 
@@ -120,17 +94,16 @@
 ئۇزاق تارىختىن بۇيان ئەجدادلىرىمىز تەرىپىدىن ياغ چىراغ، پىلىك چىراغ، جىنچىراغ، كىرسىن چىراغ دەپ ئىشلىتىلىپ كەلگەن بۇ چىراغلار تاش قوراللار دەۋرىدە تاشتىن ۋە ياغاچتىن، برونزا(كۆك مىس) دەۋرىدە مىس ۋە قاشتېشى قاتارلىقلاردىن ياسالغان. بولۇپمۇ ئەجدادلىرىمىز مېتالچىلىق دەۋرىگە قەدەم قويغاندا، مىس، تۆمۈر، چويۇن، پولات، قەلەي قاتارلىقلاردىن كۆركەم، چىرايلىق، سىپتا چىراغلار ياسىلىپ پايدىلىنىلغان. شۇڭا، ئەجدادلىرىمىزنىڭ چىراغ مەدەنىيىتى ھەققىدە تېخىمۇ ئەتراپلىق ئىزدىنىشىمىزگە توغرا كېلىدۇ.
 \end{Arabic}
 
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
 \begin{Arabic}
 %\RLmulticolcolumns
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{شېئىر}}
 \end{Arabic}
 
 
 
-
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Esliye}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Esliye}
 \begin{Arabic}
 \begin{center}
 شەيتان
@@ -138,32 +111,31 @@
 شەيخ سەئىدى
 \end{center}
 
-\hspace {1in}
+\hspace {1.3in}
     ئەل ھەققىنى  يەيتى دائىم بىر ئەبلەخ
  
- \hspace {1in}
+ \hspace {1.3in}
 ئەمما تىللاپ تۇرار ئىدى شەيتاننى
 
- \hspace {1in}
+ \hspace {1.3in}
 دىدى بىر كۈن شەيتان ئاڭا دۇچ كىلىپ:
 
- \hspace {1in}
+ \hspace {1.3in}
 ئۇچراتمىدىم سەندەك رەزىل ئىنساننى.
 
- \hspace {1in}
+ \hspace {1.3in}
 كۆڭۈلدىغۇ خېلى يېقىن تۇققان بىز،
 
-\hspace {1in}
+\hspace {1.3in}
 نىمە بۇنداق تىللاپ يۈردۈڭ تۇتامسىز؟
 
 \end{Arabic}
 
 
-
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
+\ref{•}newfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
 \begin{Arabic}
 %\RLmulticolcolumns
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{تىزىملىك}}
 \end{Arabic}
 
@@ -177,10 +149,10 @@
 \end{Arabic}
 
 
-\newfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1]{UKIJ Basma}
 \begin{Arabic}
 %\RLmulticolcolumns
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{ماتېماتىكا}}
 \end{Arabic}
 \begin{align}
@@ -214,10 +186,9 @@ A_{m,n} =
 
 \noindent
 \begin{Arabic}
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{خىمىيە}}
 \end{Arabic}
-
 
 \setcrambond{2pt}{}{}
 \chemfig{
@@ -225,9 +196,6 @@ A_{m,n} =
     (-[:-65,.7]O-[:65,.7]?[b](-[2,.7]CH_2OH)<[:-60,.707](-[6,.5]OH)
       -[,,,,line width=2.4pt](-[2,.5,,2]HO)>[:60,.707](-[6,.5]CH_2OH)-[:162,.9]O?[b])
   -[3,.7]O-[4]?(-[2,.3]-[3,.5]HO)}
-
-
-
 
 \setatomsep{2em}
 \chemfig{
@@ -238,7 +206,7 @@ A_{m,n} =
 
 \begin{Arabic}
 %\RLmulticolcolumns
-\newfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
+\renewfontfamily\arabicfont[Script=Arabic,Scale=1.5]{UKIJ Tuz}
 \section{\textarabic{كومپيوتېر پىروگىراممىسى}}
 \end{Arabic}
 \begin{algorithm}
@@ -299,6 +267,7 @@ A_{m,n} =
 \ENDIF
 \end{algorithmic}
 \end{algorithm}
+
 
 
 
